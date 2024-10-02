@@ -19,7 +19,7 @@ string convierte_bin(Unit32& entero){
 		if(i % 8 == 7 && i != tamanio_bits - 1)
 			binario += " ";
 
-		if(static_cast<int>(entero) & (1<<i)) //Si los bits están activados, se coloca un 1
+		if(entero & (1<<i)) //Si los bits están activados, se coloca un 1
 			binario += "1";
 		else				//En caso contrario, 0
 			binario += "0";
