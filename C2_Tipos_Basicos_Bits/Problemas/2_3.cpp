@@ -1,6 +1,6 @@
 //////////////////////////
 //Pedro Velasco Santana	//
-//Ej 2.1, página 39		//
+//Ej 2.3, página 39		//
 //////////////////////////
 
 #include <iostream>
@@ -34,7 +34,8 @@ int main(){
 		cin >> entero;
 	}
 
-	unsigned char valor_final = static_cast<unsigned char>(entero);
+	//Realmente no comprendo la necesidad de usar unsigned char. Imagino que será para usar el casteo
+	unsigned char valor_final = static_cast<unsigned char>(entero); 
 	cout << valor_final << endl;
 
 	string binario = convierte_bin(valor_final);
