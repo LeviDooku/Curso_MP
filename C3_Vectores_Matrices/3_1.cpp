@@ -1,6 +1,6 @@
 //////////////////////////
 //Pedro Velasco Santana	//
-//Ej 2.5, página 35 	//
+//Ej 3.1, página 48 	//
 //////////////////////////
 
 #include <iostream>
