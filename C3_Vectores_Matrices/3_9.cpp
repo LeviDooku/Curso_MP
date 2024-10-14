@@ -4,7 +4,6 @@
 //////////////////////////
 
 #include <iostream>
-#include <string>
 
 using namespace std;
 
@@ -17,7 +16,7 @@ int main(){
 	cin >> num;
 
 	int resto = num % 23;
-	
+
 	cout << "DNI completo: ";
 	cout << num << letrasDNI[resto] << endl;
 }
