@@ -36,5 +36,5 @@ int main(){
 
 	int num_pares = cuenta_pares(vec, n);
 
-	cout << endl << "El número de pares que contiene el vector es de: " << num_pares;
+	cout << endl << "El número de pares que contiene el vector es de: " << num_pares;	
 }
