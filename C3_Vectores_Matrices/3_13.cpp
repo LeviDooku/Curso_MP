@@ -20,13 +20,25 @@ int generar_aleatorio(int min, int max){
     return min + rand() % (max - min + 1);
 }
 
-/*void traspuesta_sin_mod(const int **original, int **traspuesta){
+//Traspuesta: t(i, j) = m(j, i)
 
+void traspuesta_sin_mod(const int matriz_ori[MAX_FIL][MAX_COL], int matriz_tras[MAX_FIL][MAX_COL]){
+    for(int i = 0; i < MAX_COL; ++i){
+        for(int j = 0; j < MAX_FIL; ++j)
+            matriz_tras[j][i] = matriz_ori[i][j]; //Simplemente se asigna siguiendo la forma de una traspuesta
+    }
 }
 
-void traspuesta_mod(int **original){
+void traspuesta_mod(int matriz[MAX_FIL][MAX_COL]){
+    int aux[MAX_FIL][MAX_COL];
 
-}*/
+    traspuesta_sin_mod(matriz, aux);
+
+    for(int i = 0; i < MAX_COL; ++i){
+        for(int j = 0; j < MAX_FIL; ++j)
+            matriz[i][j] = aux[i][j]; 
+    }
+}
 
 void escribe_matriz(const int matriz[MAX_FIL][MAX_COL]){
     //Mostrar el número de columna
@@ -56,6 +68,18 @@ int main(){
     }
 
     cout << "Matriz generada: " << endl;
+
+    escribe_matriz(matriz);
+
+    cout << "Matriz traspuesta (sin modoficar original): " << endl;
+
+    traspuesta_sin_mod(matriz, matriz_res);
+
+    escribe_matriz(matriz_res);
+
+    cout << "Matriz traspuesta (modificando original): " << endl;
+
+    traspuesta_mod(matriz);
 
     escribe_matriz(matriz);
 }
