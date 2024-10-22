@@ -30,5 +30,5 @@ int main(){
 
     solo_primera(c);
 
-    cout << endl << c;
+    cout << "La primera palabra es: " << endl << c;
 }
