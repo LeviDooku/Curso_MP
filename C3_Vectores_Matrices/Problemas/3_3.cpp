@@ -26,7 +26,7 @@ int main(){
     char c[MAXIMO];
     cout << "Introduzca una frase: ";
     cin.getline(c, MAXIMO);
-    cout << endl << c;
+    cout << c;
 
     solo_primera(c);
 
